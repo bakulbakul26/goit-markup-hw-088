@@ -1,8 +1,13 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 24px 0 25px 0;
+  width: 100%;
+  padding: 24px 15px 25px 15px;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    padding: 24px 15px 25px 15px;
+  }
 
   &__left {
     display: flex;
@@ -13,14 +18,31 @@
       padding: 0;
       gap: 46px;
       margin-left: 93px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
   &__contact {
     display: flex;
+    flex-wrap: wrap;
 
-    .first {
-      margin-right: 30px;
+    @media (max-width: 1200px) {
+      gap: 10px;
+      width: 140px;
+      .navbar__button__link {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1201px) {
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 
@@ -40,7 +62,7 @@
     }
     &__link {
       color: var(--grey-heading);
-      font-family: roboto;
+
       font-weight: 500;
       font-size: 14px;
       line-height: 16.41px;

@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar container">
+      <nav class="navbar container--wide">
         <div class="navbar__left">
           <div class="logo__container">
             <span class="logo__text--blue">Web</span><span class="logo__text--black">Studio</span>
@@ -41,21 +41,50 @@
           </div>
         </div>
 
-        <div>
-          <div class="navbar__contact">
-            <div class="navbar__button hoverable first">
-              <svg class="icon-envelope" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              <a class="navbar__button__link hoverable" href="mailto:info@devstudio.com"
+        <div class="navbar__contact">
+          <div class="navbar__button hoverable first">
+            <svg class="icon-envelope" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            <a class="navbar__button__link hoverable" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </div>
+          <div class="navbar__button hoverable">
+            <svg class="icon-smartphone" width="10" height="16">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            <a class="navbar__button__link hoverable">+48 111 111 111</a>
+          </div>
+        </div>
+        <div class="js-open-menu">MENU</div>
+        <div class="js-menu-container">
+          <div class="mobile-menu">
+            <button class="mobile-menu__close js-close-menu">x</button>
+            <div class="">
+              <div class="mobile-menu__button hoverable">
+                <a class="mobile-menu__button__link active hoverable" href="index.html">Agencja</a>
+              </div>
+              <div class="mobile-menu__button hoverable">
+                <a class="mobile-menu__button__link black hoverable" href="portfolio.html"
+                  >Portfolio</a
+                >
+              </div>
+              <div class="mobile-menu__button hoverable">
+                <a class="mobile-menu__button__link black hoverable" href="#">Kontakt</a>
+              </div>
+            </div>
+            <div class="mobile-menu__bottom">
+              <a class="mobile-menu__bottom__phone hoverable">+48 111 111 111</a>
+              <a class="mobile-menu__button__link email hoverable" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
-            </div>
-            <div class="navbar__button hoverable">
-              <svg class="icon-smartphone" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              <a class="navbar__button__link hoverable">+48 111 111 111</a>
+              <div class="mobile-menu__bottom__socials">
+                <a class="social-link">Instagram</a>
+                <a class="social-link">Twitter</a>
+                <a class="social-link">Facebook</a>
+                <a class="social-link">LinkedIn</a>
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +105,7 @@
 
       <section class="section">
         <div class="article container">
-          <div>
+          <div class="lorem__container">
             <div class="lorem__icon">
               <svg class="icon-antenna-1" width="70" height="70">
                 <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -89,7 +118,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="lorem__container">
             <div class="lorem__icon">
               <svg class="icon-clock-1" width="70" height="70">
                 <use href="./images/icons.svg#icon-clock-1"></use>
@@ -102,7 +131,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="lorem__container">
             <div class="lorem__icon">
               <svg class="icon-diagram-1" width="70" height="70">
                 <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -116,7 +145,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="lorem__container">
             <div class="lorem__icon">
               <svg class="icon-astronaut-1" width="70" height="70">
                 <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -131,7 +160,7 @@
         </div>
       </section>
 
-      <section class="foto">
+      <section class="activities-section">
         <div class="container">
           <h2 class="section-header">Czym sie zajmujemy</h2>
           <div class="activities-container">
@@ -172,10 +201,10 @@
         </div>
       </section>
 
-      <section class="section foto2">
+      <section class="section team-photos-section">
         <div class="container">
           <h2 class="section-header">Nasz zespół</h2>
-          <div class="foto2-flex-4">
+          <div class="team-photos-container">
             <article class="team-tile">
               <img alt="person on 1" src="./images/img.jpg" width="270" height="260" />
               <div class="team-tile__footer">
@@ -434,5 +463,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

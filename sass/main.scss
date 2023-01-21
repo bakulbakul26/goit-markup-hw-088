@@ -11,7 +11,7 @@
 @import './components/navbar';
 @import './components/footer';
 @import './components/portfolio-tiles';
-
+@import './components/mobile-menu';
 :focus-visible {
   outline: 1px auto var(--blue);
 }
@@ -19,15 +19,22 @@
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
+body {
+  font-family: Roboto !important;
+}
 .hoverable {
   transition-property: color, background-color, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 
-.foto {
+.activities-section {
   background-color: var(--white);
   padding-bottom: 94px;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .section {
@@ -43,6 +50,11 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.container--wide {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 .activities-container {
   display: flex;
   gap: 38px;
@@ -51,11 +63,18 @@
 footer .container {
   display: flex;
   padding: 60px 0;
+  width: 100%;
   gap: 70px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
+
 footer {
   color: #fff;
-  font-family: Roboto;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -64,9 +83,11 @@ footer {
   padding-bottom: 20px;
 }
 
-.foto2-flex-4 {
+.team-photos-container {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 :root {
@@ -83,7 +104,7 @@ footer {
 
 .link {
   color: var(--grey-heading);
-  font-family: roboto;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16.41px;
@@ -121,7 +142,7 @@ footer {
 .link-contact {
   color: var(--grey-heading);
   text-decoration: none;
-  font-family: Roboto;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 16.41px;
@@ -132,7 +153,7 @@ footer {
 .link-contact-end {
   color: var(--grey-heading);
   text-decoration: none;
-  font-family: Roboto;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -142,6 +163,9 @@ footer {
 
 .article {
   @include flex-gap(30px);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15px;
 }
 
 .header {
@@ -156,8 +180,7 @@ footer {
   gap: 10px;
 }
 
-.foto h2 {
-  font-family: roboto;
+.activities-section h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 42.19px;
@@ -165,8 +188,7 @@ footer {
   text-align: center;
 }
 
-.foto2 h2 {
-  font-family: roboto;
+.team-photos-section h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 42.19px;
@@ -174,17 +196,17 @@ footer {
   text-align: center;
 }
 
-.foto2 {
+.team-photos-section {
   background-color: var(--grey-light);
 }
 
-.foto article {
+.activities-section article {
   background-color: var(--grey-dark);
 }
 
 .data {
   color: var(--white);
-  font-family: roboto;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -222,10 +244,12 @@ footer {
   margin-right: 10px;
 }
 
-
 /* 5 zadanie */
 img {
   display: block;
+
+  max-width: 100%;
+  height: auto;
 }
 
 .is-hidden {

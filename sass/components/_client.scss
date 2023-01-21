@@ -1,5 +1,4 @@
-.clients__title{
-  font-family: roboto;
+.clients__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 42.19px;
@@ -7,40 +6,39 @@
   text-align: center;
   margin: 0 0 50px 0;
 }
- 
-  .clients__list{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    cursor: pointer;
-  }
-    .clients__icon{ 
-      
-  padding: 17px 32px;
+
+.clients__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.clients__icon {
+  padding: 17px 52px;
   border-radius: 4px;
-  border: 1px solid #afb1b8; 
-    }
-   .clients__icon:focus,
-    .clients__icon:hover{
-        --color1: var(--blue);
-        --color4: var(--blue);
-    }
-     .clients__icon:focus,
-    .clients__icon:hover{
-        border: 1px solid var(--blue);
-    }
-    .clients__icon:focus,
-    .clients__icon:hover svg{
-        --color1: var(--blue);
-        --color4: var(--blue);  
-     }
-    
-    
-  
- 
+  border: 1px solid #afb1b8;
 
+  @media screen and (min-width: 768px) {
+    padding: 17px 60px;
+  }
 
-
-
-
-
+  @media screen and (min-width: 1201px) {
+    padding: 17px 32px;
+  }
+}
+.clients__icon:focus,
+.clients__icon:hover {
+  --color1: var(--blue);
+  --color4: var(--blue);
+}
+.clients__icon:focus,
+.clients__icon:hover {
+  border: 1px solid var(--blue);
+}
+.clients__icon:focus,
+.clients__icon:hover svg {
+  --color1: var(--blue);
+  --color4: var(--blue);
+}
