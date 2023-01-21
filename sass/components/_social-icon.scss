@@ -1,0 +1,20 @@
+.social__icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.in-footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    --color4: var(--white);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--blue);
+    --color4: var(--white);
+  }
+}

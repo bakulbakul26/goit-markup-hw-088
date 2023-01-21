@@ -1,0 +1,258 @@
+@import './utils/mixins.scss';
+@import './components/activity.scss';
+@import './components/team-tile';
+@import './components/social-icon';
+@import './components/contact-modal';
+@import './components/navigation-img';
+@import './components/loremipsum';
+@import './components/client.scss';
+@import './components/newsletter';
+@import './components/logo';
+@import './components/navbar';
+@import './components/footer';
+@import './components/portfolio-tiles';
+
+:focus-visible {
+  outline: 1px auto var(--blue);
+}
+.portfolio-border {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.hoverable {
+  transition-property: color, background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.foto {
+  background-color: var(--white);
+  padding-bottom: 94px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-header {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.activities-container {
+  display: flex;
+  gap: 38px;
+}
+
+footer .container {
+  display: flex;
+  padding: 60px 0;
+  gap: 70px;
+}
+footer {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.foto2-flex-4 {
+  display: flex;
+  gap: 30px;
+}
+
+:root {
+  --black: #000000;
+  --blue: #2196f3;
+  --blac-section: #2f303a;
+  --grey-heading: #757575;
+  --black-text: #212121;
+  --white: #ffffff;
+  --grey-light: #f5f4fa;
+  --grey-dark: #e5e5e5;
+  --grey: #ececec;
+}
+
+.link {
+  color: var(--grey-heading);
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-active {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+}
+
+.link:hover,
+.link:focus {
+  color: #2196f3;
+}
+
+.link-active::after {
+  content: '';
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 2px;
+  position: relative;
+  top: 31px;
+}
+
+.link-contact {
+  color: var(--grey-heading);
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.link-contact-end {
+  color: var(--grey-heading);
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.article {
+  @include flex-gap(30px);
+}
+
+.header {
+  display: flex;
+}
+.text {
+  display: flex;
+}
+
+.social-container {
+  display: flex;
+  gap: 10px;
+}
+
+.foto h2 {
+  font-family: roboto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42.19px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.foto2 h2 {
+  font-family: roboto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42.19px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.foto2 {
+  background-color: var(--grey-light);
+}
+
+.foto article {
+  background-color: var(--grey-dark);
+}
+
+.data {
+  color: var(--white);
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.portfolio-foto {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-foto:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--blac-section);
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+}
+
+.font-style-normal {
+  font-style: normal;
+}
+.icon-envelope {
+  fill: currentColor;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.icon-smartphone {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+/* 5 zadanie */
+img {
+  display: block;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 500ms;
+}
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.is-hidden .contact-modal_container {
+  transform: translate(-50%, -50%) scale(0.25);
+}
+
+/* zadanie 6 */
+
+.newsletter-input {
+  display: flex;
+}
+
+.icon-icon-send {
+  margin-left: 24px;
+}
