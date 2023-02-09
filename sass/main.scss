@@ -1,25 +1,23 @@
 @import './utils/mixins.scss';
 @import './components/activity.scss';
-@import './components/team-tile';
-@import './components/social-icon';
-@import './components/contact-modal';
-@import './components/navigation-img';
-@import './components/loremipsum';
+@import './components/team-tile.scss';
+@import './components/social-icon.scss';
+@import './components/contact-modal.scss';
+@import './components/navigation-img.scss';
+@import './components/loremipsum.scss';
 @import './components/client.scss';
-@import './components/newsletter';
-@import './components/logo';
-@import './components/navbar';
-@import './components/footer';
-@import './components/portfolio-tiles';
-@import './components/mobile-menu';
+@import './components/newsletter.scss';
+@import './components/logo.scss';
+@import './components/navbar.scss';
+@import './components/footer.scss';
+@import './components/portfolio-tiles.scss';
+@import './components/mobile-menu.scss';
 :focus-visible {
   outline: 1px auto var(--blue);
 }
 .portfolio-border {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
-
-
 
 .hoverable {
   transition-property: color, background-color, box-shadow;

@@ -34,15 +34,17 @@
       width: 140px;
       .navbar__button__link {
         font-size: 12px;
+        
       }
     }
 
     @media screen and (min-width: 1201px) {
       gap: 30px;
+      
     }
 
     @media screen and (max-width: 768px) {
-      display: none;
+      display:none
     }
   }
 
